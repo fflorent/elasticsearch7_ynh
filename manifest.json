@@ -6,7 +6,7 @@
         "en": "Distributed and RESTful search engine.",
         "fr": "Moteur de recherche RESTful."
     },
-    "version": "7.17.8~ynh1",
+    "version": "7.17.8~ynh2",
     "url": "https://github.com/elastic/elasticsearch",
     "upstream": {
         "license": "SSPL-1.0",
@@ -23,6 +23,7 @@
     "requirements": {
         "yunohost": ">= 11.0.0"
     },
+    "services": [],
     "multi_instance": true,
     "arguments": {
         "install": []
