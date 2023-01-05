@@ -86,23 +86,14 @@ chown $app:$app "/run/$app"
 #=================================================
 # SPECIFIC RESTORATION
 #=================================================
-# REINSTALL DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Reinstalling dependencies..." --weight=1
-
-# Define and install dependencies
-ynh_install_app_dependencies $pkg_dependencies
-
-
-#=================================================
 # RESTORE VARIOUS FILES
 #=================================================
 ynh_script_progression --message="Restoring various files..."
 
-ynh_restore_file --origin_path="/etc/sysctl.d/90-max_map_count-opensearch.conf"
+ynh_restore_file --origin_path="/etc/sysctl.d/90-max_map_count-elasticsearch.conf"
 if ! IS_PACKAGE_CHECK   # LXC doesn't allow sysctl to play with kernel options.
 then
-	sysctl -p /etc/sysctl.d/90-max_map_count-opensearch.conf
+	sysctl -p /etc/sysctl.d/90-max_map_count-elasticsearch.conf
 fi
 
 #=================================================
@@ -125,7 +116,7 @@ ynh_restore_file --origin_path="/etc/logrotate.d/$app"
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-yunohost service add $app --description="OpenSearch - Open source distributed and RESTful search engine" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="ElasticSearch - Distributed and RESTful search engine" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

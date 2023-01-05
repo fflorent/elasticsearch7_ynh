@@ -17,7 +17,7 @@
 current_version=$(cat manifest.json | jq -j '.version|split("~")[0]')
 repo=$(cat manifest.json | jq -j '.upstream.code|split("https://github.com/")[1]')
 # Some jq magic is needed, because the latest upstream release is not always the latest version (e.g. security patches for older versions)
-version=$(curl --silent "https://api.github.com/repos/$repo/releases" | jq -r '.[] | select( .prerelease != true ) | .tag_name' | sort -V | tail -1)
+version=$(curl --silent "https://api.github.com/repos/$repo/releases" | jq -r '.[] | select( .prerelease != true) | .tag_name | select( startswith("v7") )' | sort -V | tail -1)
 
 # Later down the script, we assume the version has only digits and dots
 # Sometimes the release name starts with a "v", so let's filter it out.
@@ -51,18 +51,18 @@ echo "1 available asset(s)"
 # UPDATE SOURCE FILES
 #=================================================
 
-for arch in "x64" "arm64"; do
-asset_url="https://artifacts.opensearch.org/releases/bundle/opensearch/$version/opensearch-$version-linux-$arch.tar.gz"
+for arch in "x86_64" "aarch64"; do
+asset_url="https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version-linux-$arch.tar.gz"
 echo "Handling asset at $asset_url"
 
 # Assign the asset to a source file in conf/ directory
 # Here we base the source file name upon a unique keyword in the assets url (admin vs. update)
 # Leave $src empty to ignore the asset
 case $arch in
-  "x64")
+  "x86_64")
     src="amd64"
     ;;
-  "arm64")
+  "aarch64")
     src="arm64"
     ;;
 esac

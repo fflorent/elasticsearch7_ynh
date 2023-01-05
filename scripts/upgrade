@@ -56,27 +56,6 @@ ynh_systemd_action --service_name=$app --action="stop" --log_path="/var/log/$app
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
-#
-# N.B. : the followings setting migrations snippets are provided as *EXAMPLES*
-# of what you may want to do in some cases (e.g. a setting was not defined on
-# some legacy installs and you therefore want to initiaze stuff during upgrade)
-#
-
-# If db_name doesn't exist, create it
-#if [ -z "$db_name" ]; then
-#	db_name=$(ynh_sanitize_dbid --db_name=$app)
-#	ynh_app_setting_set --app=$app --key=db_name --value=$db_name
-#fi
-
-# If final_path doesn't exist, create it
-#if [ -z "$final_path" ]; then
-#	final_path=/var/www/$app
-#	ynh_app_setting_set --app=$app --key=final_path --value=$final_path
-#fi
-
-### If nobody installed your app before 4.1,
-### then you may safely remove these lines
-
 #=================================================
 # CREATE DEDICATED USER
 #=================================================
@@ -94,7 +73,7 @@ then
 	ynh_script_progression --message="Upgrading source files..." --weight=20
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path" --source_id="$YNH_ARCH" --keep="config/opensearch.yml config/jvm.options.d/yunohost.conf"
+	ynh_setup_source --dest_dir="$final_path" --source_id="$YNH_ARCH" --keep="config/elasticsearch.yml config/jvm.options.d/yunohost.conf"
 fi
 
 chmod 750 "$final_path"
@@ -102,22 +81,15 @@ chmod -R o-rwx "$final_path"
 chown -R $app:$app "$final_path"
 
 #=================================================
-# UPGRADE DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Upgrading dependencies..." --weight=1
-
-ynh_install_app_dependencies $pkg_dependencies
-
-#=================================================
 # UPDATE A CONFIG FILE
 #=================================================
 ynh_script_progression --message="Updating a configuration file..." --weight=1
 
-ynh_add_config --template="opensearch.yml" --destination="$final_path/config/opensearch.yml"
+ynh_add_config --template="elasticsearch.yml" --destination="$final_path/config/elasticsearch.yml"
 ynh_add_config --template="jvm.options" --destination="$final_path/config/jvm.options.d/yunohost.options"
 
-chmod 400 "$final_path/config/opensearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
-chown $app:$app "$final_path/config/opensearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
+chmod 400 "$final_path/config/elasticsearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
+chown $app:$app "$final_path/config/elasticsearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
 
 #=================================================
 # INCREASE MAX_MAP_COUNT
@@ -125,11 +97,11 @@ chown $app:$app "$final_path/config/opensearch.yml" "$final_path/config/jvm.opti
 ynh_script_progression --message="Increasing maximum map count (sysctl)..."
 
 # Increase the maximum number of files inotify can monitor.
-cp -a ../conf/90-max_map_count-opensearch.conf /etc/sysctl.d/
+cp -a ../conf/90-max_map_count-elasticsearch.conf /etc/sysctl.d/
 # Then, reload the kernel configuration.
 if ! IS_PACKAGE_CHECK   # LXC doesn't allow sysctl to play with kernel options.
 then
-	sysctl -p /etc/sysctl.d/90-max_map_count-opensearch.conf
+	sysctl -p /etc/sysctl.d/90-max_map_count-elasticsearch.conf
 fi
 
 #=================================================
@@ -155,7 +127,7 @@ ynh_use_logrotate --non-append
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-yunohost service add $app --description="OpenSearch - Open source distributed and RESTful search engine" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="ElasticSearch - Distributed and RESTful search engine" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

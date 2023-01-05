@@ -52,13 +52,6 @@ xmx=1g
 ynh_app_setting_set --app=$app --key=xmx --value=$xmx
 
 #=================================================
-# INSTALL DEPENDENCIES
-#=================================================
-ynh_script_progression --message="Installing dependencies..." --weight=1
-
-ynh_install_app_dependencies $pkg_dependencies
-
-#=================================================
 # CREATE DEDICATED USER
 #=================================================
 ynh_script_progression --message="Configuring system user..." --weight=1
@@ -108,11 +101,11 @@ chown $app:$app "/run/$app"
 #=================================================
 ynh_script_progression --message="Adding the configuration files..." --weight=1
 
-ynh_add_config --template="opensearch.yml" --destination="$final_path/config/opensearch.yml"
+ynh_add_config --template="elasticsearch.yml" --destination="$final_path/config/elasticsearch.yml"
 ynh_add_config --template="jvm.options" --destination="$final_path/config/jvm.options.d/yunohost.options"
 
-chmod 400 "$final_path/config/opensearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
-chown $app:$app "$final_path/config/opensearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
+chmod 400 "$final_path/config/elasticsearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
+chown $app:$app "$final_path/config/elasticsearch.yml" "$final_path/config/jvm.options.d/yunohost.options"
 
 
 #=================================================
@@ -121,11 +114,11 @@ chown $app:$app "$final_path/config/opensearch.yml" "$final_path/config/jvm.opti
 ynh_script_progression --message="Increasing maximum map count (sysctl)..."
 
 # Increase the maximum number of files inotify can monitor.
-cp -a ../conf/90-max_map_count-opensearch.conf /etc/sysctl.d/
+cp -a ../conf/90-max_map_count-elasticsearch.conf /etc/sysctl.d/
 # Then, reload the kernel configuration.
 if ! IS_PACKAGE_CHECK   # LXC doesn't allow sysctl to play with kernel options.
 then
-	sysctl -p /etc/sysctl.d/90-max_map_count-opensearch.conf
+	sysctl -p /etc/sysctl.d/90-max_map_count-elasticsearch.conf
 fi
 
 
@@ -153,7 +146,7 @@ ynh_use_logrotate
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
 
-yunohost service add $app --description="OpenSearch - Open source distributed and RESTful search engine" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="ElasticSearch - Distributed and RESTful search engine" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE

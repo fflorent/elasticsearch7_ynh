@@ -1,19 +1,19 @@
 {
-    "name": "OpenSearch",
-    "id": "opensearch",
+    "name": "ElasticSearch 7",
+    "id": "elasticsearch7",
     "packaging_format": 1,
     "description": {
-        "en": "Open source distributed and RESTful search engine.",
-        "fr": "Moteur de recherche RESTful et open-source."
+        "en": "Distributed and RESTful search engine.",
+        "fr": "Moteur de recherche RESTful."
     },
-    "version": "2.4.1~ynh1",
-    "url": "https://github.com/opensearch-project/OpenSearch",
+    "version": "7.0.0~ynh1",
+    "url": "https://github.com/elastic/elasticsearch",
     "upstream": {
-        "license": "Apache-2.0",
-        "website": "https://opensearch.org",
-        "demo": "https://playground.opensearch.org/app/home",
-        "admindoc": "https://opensearch.org/docs/latest/",
-        "code": "https://github.com/opensearch-project/OpenSearch"
+        "license": "SSPL-1.0",
+        "website": "https://elastic.co",
+        "demo": "https://www.elastic.co/demos",
+        "admindoc": "https://www.elastic.co/guide/en/elasticsearch/reference/7.17/elasticsearch-intro.html",
+        "code": "https://github.com/elastic/elasticsearch"
     },
     "license": "AGPL-3.0-or-later",
     "maintainer": {
@@ -24,9 +24,6 @@
         "yunohost": ">= 11.0.0"
     },
     "multi_instance": true,
-    "services": [
-        "nginx"
-    ],
     "arguments": {
         "install": []
     }

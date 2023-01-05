@@ -2,8 +2,8 @@ version = "1.0"
 
 [main]
 
-name.en = "OpenSearch configuration"
-name.fr = "Configuration d'OpenSearch"
+name.en = "ElasticSearch configuration"
+name.fr = "Configuration d'ElasticSearch"
 
 services = ["__APP__"]
 

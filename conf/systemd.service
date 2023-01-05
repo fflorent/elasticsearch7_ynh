@@ -1,18 +1,19 @@
 [Unit]
-Description=OpenSearch - Open source distributed and RESTful search engine
-Documentation=https://opensearch.org
+Description=ElasticSearch - Distributed and RESTful search engine
+Documentation=https://elastic.co
 After=network.target
 
 [Service]
 Type=simple
 User=__APP__
 Group=__APP__
-Environment="OPENSEARCH_JAVA_HOME=__FINALPATH__/jdk"
-Environment="OPENSEARCH_PATH_CONF=__FINALPATH__/config"
+Environment="ES_JAVA_HOME=__FINALPATH__/jdk"
+Environment="ES_PATH_CONF=__FINALPATH__/config"
 Environment="PID_DIR=/run/__APP__"
-Environment="OPENSEARCH_SD_NOTIFY=true"
+Environment="ES_SD_NOTIFY=true"
+EnvironmentFile=-@path.env@
 WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/bin/opensearch -p ${PID_DIR}/__APP__.pid --quiet
+ExecStart=__FINALPATH__/bin/elasticsearch -p ${PID_DIR}/__APP__.pid --quiet
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 
@@ -44,7 +45,7 @@ SendSIGKILL=no
 SuccessExitStatus=143
 
 # Allow a slow startup before the systemd notifier module kicks in to extend the timeout
-TimeoutStartSec=75
+TimeoutStartSec=900
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these

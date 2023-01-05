@@ -11,7 +11,7 @@
 ## -Xms4g
 ## -Xmx4g
 ##
-## See https://opensearch.org/docs/opensearch/install/important-settings/
+## See https://www.elastic.co/guide/en/elasticsearch/reference/7.17/advanced-configuration.html
 ## for more information
 ##
 ################################################################
