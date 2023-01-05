@@ -1,5 +1,5 @@
-SOURCE_URL=https://artifacts.opensearch.org/releases/bundle/opensearch/2.4.1/opensearch-2.4.1-linux-arm64.tar.gz
-SOURCE_SUM=fa3151423ce747ed8e1d7afa7d84418e4f216f753e8e300d49a373f0cdc78ec3
+SOURCE_URL=https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-aarch64.tar.gz
+SOURCE_SUM=47d6532a16e02b92208a0d71289a6fb021542c925ed868e49237032bc3ab5c6a
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
 SOURCE_IN_SUBDIR=true
