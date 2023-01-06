@@ -38,6 +38,10 @@ To learn more about Elasticsearch’s features and capabilities, see the [produc
  - Therefore, the package is configured to remain not public for now (i.e. not accessible through the web, the apps depending on it should be installed on the same server)
  - Not scalable for now
 
+## :red_circle: Fonctions indésirables
+
+- **Not totally free upstream**: The packaged app is under an overall free licence, but with clauses that restrict its use.
+
 ## Documentations et ressources
 
 * Site officiel de l'app : <https://elastic.co>
