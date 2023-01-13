@@ -105,7 +105,8 @@ done
 #=================================================
 
 # Replace new version in manifest
-echo "$(jq -s --indent 4 ".[] | .version = \"$version~ynh1\"" manifest.json)" > manifest.json
+admindoc="https://www.elastic.co/guide/en/elasticsearch/reference/$(echo $version | grep -Po "^\d+\.\d+")/elasticsearch-intro.html"
+echo "$(jq -s --indent 4 ".[] | .version = \"$version~ynh1\" | .upstream.admindoc = \"$admindoc\"" manifest.json)" > manifest.json
 
 # No need to update the README, yunohost-bot takes care of it
 
