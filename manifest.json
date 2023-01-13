@@ -6,7 +6,7 @@
         "en": "Distributed and RESTful search engine.",
         "fr": "Moteur de recherche RESTful."
     },
-    "version": "7.17.8~ynh3",
+    "version": "7.17.8~ynh4",
     "url": "https://github.com/elastic/elasticsearch",
     "upstream": {
         "license": "SSPL-1.0",
@@ -15,7 +15,7 @@
         "admindoc": "https://www.elastic.co/guide/en/elasticsearch/reference/7.17/elasticsearch-intro.html",
         "code": "https://github.com/elastic/elasticsearch"
     },
-    "license": "AGPL-3.0-or-later",
+    "license": "SSPL-1.0",
     "maintainer": {
         "name": "fflorent",
         "email": "florent.git@zeteo.me"

@@ -15,19 +15,11 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Elasticsearch is the distributed, RESTful search and analytics engine at the heart of the [Elastic Stack](https://www.elastic.co/products). You can use Elasticsearch to store, search, and manage data for:
- - Logs
- - Metrics
- - A search backend
- - Application monitoring
- - Endpoint security
-
-... and more!
-
+Elasticsearch is the distributed, RESTful search and analytics engine at the heart of the [Elastic Stack](https://www.elastic.co/products). You can use Elasticsearch to store, search, and manage data for logs, metrics, search backend, application monitoring, Endpoint security.
 To learn more about Elasticsearch’s features and capabilities, see the [product page](https://www.elastic.co/products/elasticsearch).
 
 
-**Version incluse :** 7.17.8~ynh3
+**Version incluse :** 7.17.8~ynh4
 
 **Démo :** https://www.elastic.co/demos
 ## Avertissements / informations importantes
