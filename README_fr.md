@@ -5,15 +5,15 @@ It shall NOT be edited by hand.
 
 # ElasticSearch 7 pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/elasticsearch7.svg)](https://dash.yunohost.org/appci/app/elasticsearch7) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/elasticsearch7.svg)](https://dash.yunohost.org/appci/app/elasticsearch7) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.maintain.svg)  
 [![Installer ElasticSearch 7 avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=elasticsearch7)
 
 *[Read this readme in english.](./README.md)*
 
-> *Ce package vous permet d'installer ElasticSearch 7 rapidement et simplement sur un serveur YunoHost.
-Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l'installer et en profiter.*
+> *Ce package vous permet d’installer ElasticSearch 7 rapidement et simplement sur un serveur YunoHost.
+Si vous n’avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour savoir comment l’installer et en profiter.*
 
-## Vue d'ensemble
+## Vue d’ensemble
 
 Elasticsearch is the distributed, RESTful search and analytics engine at the heart of the [Elastic Stack](https://www.elastic.co/products). You can use Elasticsearch to store, search, and manage data for logs, metrics, search backend, application monitoring, Endpoint security.
 To learn more about Elasticsearch’s features and capabilities, see the [product page](https://www.elastic.co/products/elasticsearch).
@@ -36,9 +36,9 @@ To learn more about Elasticsearch’s features and capabilities, see the [produc
 
 ## Documentations et ressources
 
-* Site officiel de l'app : <https://elastic.co>
-* Documentation officielle de l'admin : <https://www.elastic.co/guide/en/elasticsearch/reference/7.17/elasticsearch-intro.html>
-* Dépôt de code officiel de l'app : <https://github.com/elastic/elasticsearch>
+* Site officiel de l’app : <https://elastic.co>
+* Documentation officielle de l’admin : <https://www.elastic.co/guide/en/elasticsearch/reference/7.17/elasticsearch-intro.html>
+* Dépôt de code officiel de l’app : <https://github.com/elastic/elasticsearch>
 * Documentation YunoHost pour cette app : <https://yunohost.org/app_elasticsearch7>
 * Signaler un bug : <https://github.com/YunoHost-Apps/elasticsearch7_ynh/issues>
 
@@ -54,4 +54,4 @@ ou
 sudo yunohost app upgrade elasticsearch7 -u https://github.com/YunoHost-Apps/elasticsearch7_ynh/tree/testing --debug
 ```
 
-**Plus d'infos sur le packaging d'applications :** <https://yunohost.org/packaging_apps>
+**Plus d’infos sur le packaging d’applications :** <https://yunohost.org/packaging_apps>
