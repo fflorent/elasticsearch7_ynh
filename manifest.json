@@ -3,8 +3,8 @@
     "id": "elasticsearch7",
     "packaging_format": 1,
     "description": {
-        "en": "Distributed and RESTful search engine.",
-        "fr": "Moteur de recherche RESTful."
+        "en": "Distributed and RESTful search engine",
+        "fr": "Moteur de recherche RESTful"
     },
     "version": "7.17.8~ynh4",
     "url": "https://github.com/elastic/elasticsearch",
