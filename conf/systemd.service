@@ -11,7 +11,6 @@ Environment="ES_JAVA_HOME=__FINALPATH__/jdk"
 Environment="ES_PATH_CONF=__FINALPATH__/config"
 Environment="PID_DIR=/run/__APP__"
 Environment="ES_SD_NOTIFY=true"
-EnvironmentFile=-@path.env@
 WorkingDirectory=__FINALPATH__/
 ExecStart=__FINALPATH__/bin/elasticsearch -p ${PID_DIR}/__APP__.pid --quiet
 StandardOutput=append:/var/log/__APP__/__APP__.log
