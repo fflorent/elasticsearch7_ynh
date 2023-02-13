@@ -6,7 +6,7 @@
         "en": "Distributed and RESTful search engine",
         "fr": "Moteur de recherche RESTful"
     },
-    "version": "7.17.8~ynh5",
+    "version": "7.17.8~ynh6",
     "url": "https://github.com/elastic/elasticsearch",
     "upstream": {
         "license": "SSPL-1.0",

@@ -5,7 +5,7 @@ It shall NOT be edited by hand.
 
 # ElasticSearch 7 pour YunoHost
 
-[![Niveau d’intégration](https://dash.yunohost.org/integration/elasticsearch7.svg)](https://dash.yunohost.org/appci/app/elasticsearch7) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.maintain.svg)  
+[![Niveau d’intégration](https://dash.yunohost.org/integration/elasticsearch7.svg)](https://dash.yunohost.org/appci/app/elasticsearch7) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/elasticsearch7.maintain.svg)
 [![Installer ElasticSearch 7 avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=elasticsearch7)
 
 *[Read this readme in english.](./README.md)*
@@ -19,7 +19,7 @@ Elasticsearch is the distributed, RESTful search and analytics engine at the hea
 To learn more about Elasticsearch’s features and capabilities, see the [product page](https://www.elastic.co/products/elasticsearch).
 
 
-**Version incluse :** 7.17.8~ynh5
+**Version incluse :** 7.17.8~ynh6
 
 **Démo :** https://www.elastic.co/demos
 ## Avertissements / informations importantes
