@@ -1,5 +1,5 @@
 [Unit]
-Description=ElasticSearch - Distributed and RESTful search engine
+Description=ElasticSearch: Distributed and RESTful search engine
 Documentation=https://elastic.co
 After=network.target
 
@@ -8,12 +8,12 @@ Type=simple
 User=__APP__
 Group=__APP__
 RuntimeDirectory=__APP__
-Environment="ES_JAVA_HOME=__FINALPATH__/jdk"
-Environment="ES_PATH_CONF=__FINALPATH__/config"
+Environment="ES_JAVA_HOME=__INSTALL_DIR__/jdk"
+Environment="ES_PATH_CONF=__INSTALL_DIR__/config"
 Environment="PID_DIR=/run/__APP__"
 Environment="ES_SD_NOTIFY=true"
-WorkingDirectory=__FINALPATH__/
-ExecStart=__FINALPATH__/bin/elasticsearch -p ${PID_DIR}/__APP__.pid --quiet
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/bin/elasticsearch -p ${PID_DIR}/__APP__.pid --quiet
 StandardOutput=append:/var/log/__APP__/__APP__.log
 StandardError=inherit
 

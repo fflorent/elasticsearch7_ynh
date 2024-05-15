@@ -1,0 +1,57 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "elasticsearch7"
+name = "ElasticSearch 7"
+description.en = "Distributed and RESTful search engine"
+description.fr = "Moteur de recherche RESTful"
+
+version = "7.17.8~ynh7"
+
+maintainers = ["fflorent"]
+
+[upstream]
+license = "SSPL-1.0"
+website = "https://elastic.co"
+demo = "https://www.elastic.co/demos"
+admindoc = "https://www.elastic.co/guide/en/elasticsearch/reference/7.17/elasticsearch-intro.html"
+code = "https://github.com/elastic/elasticsearch"
+
+[integration]
+yunohost = ">= 11.2"
+architectures = ["amd64", "arm64"]
+multi_instance = true
+
+ldap = "not_relevant"
+
+sso = "not_relevant"
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+
+[resources]
+    [resources.sources.main]
+    arm64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-aarch64.tar.gz"
+    arm64.sha256 = "47d6532a16e02b92208a0d71289a6fb021542c925ed868e49237032bc3ab5c6a"
+    amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-x86_64.tar.gz"
+    amd64.sha256 = "1c40ba4e0912da1432cb85c0d246f68e14a7da249feea91752c8eaeb28adf0ac"
+
+    # This is only for notification purposes! Generated PRs will be invalid.
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = "tarball"
+    autoupdate.asset.arm64 = "tarball"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    [resources.data_dir]
+
+    [resources.permissions]
+
+    [resources.ports]
+    main.default = 9200
