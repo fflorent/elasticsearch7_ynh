@@ -33,7 +33,7 @@ To learn more about Elasticsearch’s features and capabilities, see the [produc
 
 ## :red_circle: Anti-fonctionnalités
 
-- **Application sous licence libre restreinte**: L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation.
+- **Application sous licence libre restreinte **: L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation.
 
 ## Documentations et ressources
 
