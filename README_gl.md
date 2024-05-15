@@ -23,17 +23,9 @@ To learn more about Elasticsearch’s features and capabilities, see the [produc
 **Versión proporcionada:** 7.17.8~ynh6
 
 **Demo:** <https://www.elastic.co/demos>
-## Avisos / información importante
+## :red_circle: Debes considerar
 
-### Limitations
- - **Not totally free**: Licensed under SSPL, see for more information: <https://en.wikipedia.org/wiki/Server_Side_Public_License>
- - Currently the security is disabled
- - Therefore, the package is configured to remain not public for now (i.e. not accessible through the web, the apps depending on it should be installed on the same server)
- - Not scalable for now
-
-## :red_circle: Caraterísticas cuestionables
-
-- **Not totally free upstream**: The packaged app is under an overall free licence, but with clauses that restrict its use.
+- **Not totally free upstream**: The packaged app is under an overall free license, but with clauses that may restrict its use.
 
 ## Documentación e recursos
 

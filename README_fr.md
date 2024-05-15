@@ -16,24 +16,15 @@ Il NE doit PAS être modifié à la main.
 
 ## Vue d’ensemble
 
-Elasticsearch is the distributed, RESTful search and analytics engine at the heart of the [Elastic Stack](https://www.elastic.co/products). You can use Elasticsearch to store, search, and manage data for logs, metrics, search backend, application monitoring, Endpoint security.
-To learn more about Elasticsearch’s features and capabilities, see the [product page](https://www.elastic.co/products/elasticsearch).
-
+Elasticsearch est le moteur de recherche et d'analyse distribué et RESTful au cœur de la [Elastic Stack](https://www.elastic.co/products). Vous pouvez utiliser Elasticsearch pour stocker, rechercher et gérer des données pour les journaux, les métriques, le backend de recherche, la surveillance des applications et la sécurité des points de terminaison.
+Pour en savoir plus sur les fonctionnalités et capacités d'Elasticsearch, consultez la [page produit](https://www.elastic.co/products/elasticsearch).
 
 **Version incluse :** 7.17.8~ynh6
 
 **Démo :** <https://www.elastic.co/demos>
-## Avertissements / informations importantes
-
-### Limitations
- - **Not totally free**: Licensed under SSPL, see for more information: <https://en.wikipedia.org/wiki/Server_Side_Public_License>
- - Currently the security is disabled
- - Therefore, the package is configured to remain not public for now (i.e. not accessible through the web, the apps depending on it should be installed on the same server)
- - Not scalable for now
-
 ## :red_circle: Anti-fonctionnalités
 
-- **Application sous licence libre restreinte**: L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation.
+- **Application sous licence libre restreinte **: L'application packagée est sous une licence globalement libre, mais avec des clauses qui pourraient restreindre son utilisation.
 
 ## Documentations et ressources
 
