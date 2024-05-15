@@ -23,14 +23,6 @@ To learn more about Elasticsearch’s features and capabilities, see the [produc
 **Paketatutako bertsioa:** 7.17.8~ynh6
 
 **Demoa:** <https://www.elastic.co/demos>
-## Ezespena / informazio garrantzitsua
-
-### Limitations
- - **Not totally free**: Licensed under SSPL, see for more information: <https://en.wikipedia.org/wiki/Server_Side_Public_License>
- - Currently the security is disabled
- - Therefore, the package is configured to remain not public for now (i.e. not accessible through the web, the apps depending on it should be installed on the same server)
- - Not scalable for now
-
 ## :red_circle: Ezaugarri zalantzagarriak
 
 - **Jatorrizkoa ez da erabat librea**: Aplikazioak lizentzia librea du orokorrean, baina bere erabilera mugatzen duten klausulekin.
