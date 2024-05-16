@@ -42,6 +42,7 @@ ram.runtime = "50M"
 
     # This is only for notification purposes! Generated PRs will be invalid.
     autoupdate.strategy = "latest_github_release"
+    autoupdate.version_regex = "(v7\\..*)"
     autoupdate.asset.amd64 = "tarball"
     autoupdate.asset.arm64 = "tarball"
 
