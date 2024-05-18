@@ -35,13 +35,14 @@ ram.runtime = "50M"
 
 [resources]
     [resources.sources.main]
-    arm64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-aarch64.tar.gz"
-    arm64.sha256 = "47d6532a16e02b92208a0d71289a6fb021542c925ed868e49237032bc3ab5c6a"
-    amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.8-linux-x86_64.tar.gz"
-    amd64.sha256 = "1c40ba4e0912da1432cb85c0d246f68e14a7da249feea91752c8eaeb28adf0ac"
+    arm64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.21-linux-aarch64.tar.gz"
+    arm64.sha256 = "f1fc8e21c034ceb5e725b24107bff0e8af05ff47ab92bf77c6a3ada90084a111"
+    amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.21-linux-x86_64.tar.gz"
+    amd64.sha256 = "e38938059bac6020de17be3a8804a25e55f40a5adc2edf2eda3e23897a2545e2"
 
     # This is only for notification purposes! Generated PRs will be invalid.
     autoupdate.strategy = "latest_github_release"
+    autoupdate.version_regex = "(v7\\..*)"
     autoupdate.asset.amd64 = "tarball"
     autoupdate.asset.arm64 = "tarball"
 
