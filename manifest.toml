@@ -40,12 +40,6 @@ ram.runtime = "50M"
     amd64.url = "https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-7.17.21-linux-x86_64.tar.gz"
     amd64.sha256 = "e38938059bac6020de17be3a8804a25e55f40a5adc2edf2eda3e23897a2545e2"
 
-    # This is only for notification purposes! Generated PRs will be invalid.
-    autoupdate.strategy = "latest_github_release"
-    autoupdate.version_regex = "(v7\\..*)"
-    autoupdate.asset.amd64 = "tarball"
-    autoupdate.asset.arm64 = "tarball"
-
     [resources.system_user]
 
     [resources.install_dir]
