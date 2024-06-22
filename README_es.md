@@ -23,7 +23,7 @@ To learn more about Elasticsearch’s features and capabilities, see the [produc
 **Versión actual:** 7.17.8~ynh7
 
 **Demo:** <https://www.elastic.co/demos>
-## :red_circle: funcionalidades no deseadas
+## :red_circle: Características no deseables
 
 - **Not totally free upstream**: The packaged app is under an overall free license, but with clauses that may restrict its use.
 
